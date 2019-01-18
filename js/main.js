@@ -86,8 +86,11 @@
 		
 		THREE.Loader.Handlers.add( /\.dds$/i, new THREE.DDSLoader() );
 		var mtlLoader = new THREE.MTLLoader();
+		console.log(mtlLoader.url);
 		mtlLoader.setBaseUrl( 'models/' );
+		console.log(mtlLoader.url);
 		mtlLoader.setPath( 'models/' );
+		console.log(mtlLoader.url);
 		mtlLoader.load( 'openheartLD1.mtl', function( materials ) {
 			materials.preload();
 			var objLoader = new THREE.OBJLoader();
